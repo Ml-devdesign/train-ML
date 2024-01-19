@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice Train</title>
+  <style>
+    /*destination emplois animee / la fumee aliggner pour l'annimation a retelecharger car ne fonctionnne pas toujours /position absolue */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: url(img/bg.jpg) no-repeat 50% 0/1440px auto; /* enlever cette image de référence quand l'exercice est fini */
+    }
+
+    .scene {
+      position: relative;
+      margin: 0px auto;
+      width: 1440px;
+      height: 967px;
+      overflow: hidden; /* sert à masquer tout ce qui dépasse de l'élément, comme un masque */
+    }
+
+    /* exemple avec le train */
+    .train {
+      position: absolute;
+      bottom: 72px;
+      left: -2100px;
+      background: url(img/train.png) no-repeat;
+      width: 3061px;
+      height: 274px;
+      transition: left 5s cubic-bezier(0, 0, 0, 1);
+
+    }
+    .sun {
+      background-color: rgb(250 249 216 / 50%);
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: -9px;
+      left: 640px;
+      border-radius: 60%;
+    }
+    .smoke{
+      background: url(img/smoke.png)no-repeat;
+      display: block;
+      position: absolute;
+      width: 383px;
+      height: 389px;
+      top: 227px;
+      right: 381px;
+      transition: left 5s cubic-bezier(0, 0, 0, 1) infinite;
+      }
+
+    .sun {
+      background-color: rgb(250 249 216 / 50%);
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: -9px;
+      left: 640px;
+      border-radius: 60%;
+    }
+    /* comme le train, continuer à placer le plus fidèlement possible, les éléments de l'illustration dans le code HTML et dans la css, pour reproduire la scène */
+    .bg_mountaines {
+      position: absolute;
+      background: url(img/bg-mountains.png) no-repeat;
+      width: 100%;
+      height: 274px;
+      background-size: 2494px;
+      left: 652px;
+      top: 496px;
+      z-index: -1;
+    } 
+    .ground{
+      background: url(img/ground.png);
+      position: absolute;
+      bottom: -33%;
+      left: -70%;
+      width: 3911px;
+      height: 720px;
+      padding: 0;
+        } 
+
+    .city-ap {
+      background: url(img/city-ap.png) no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 459px;
+      right: 362px;
+    }
+    .station-characters {
+      background: url(img/station-characters.png) no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 485px;
+      right: 53px;
+    }
+    .cloud-sm{
+      background: url(img/cloud-sm.png) no-repeat;
+      width: 57%;
+      height: 65%;
+      background-size: 1252px;
+      position:absolute;
+      left: 804px;
+      bottom: 162px;
+    }
+    .cloud-xl{
+      position: absolute;
+      background: url(img/cloud-xl.png) no-repeat;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      left: 558px;
+      top: 21px;
+    }
+
+    .birds {
+    position: absolute;
+    background: url(img/birds.png) no-repeat ;
+    right: 51%;
+    width: 193px;
+    height: 117px;
+    top: 13%;
+    }
+
+    .birds-2 {
+      position: absolute;
+      background: url(img/birds-2.png) no-repeat;
+      display: inline-block;
+      width: 416px;
+      height: 282px;
+      padding: 0;
+      top: 34%;
+      left: 76%;
+
+    } 
+
+    .rails{
+      background: url(img/rails.png) no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 781px;
+      left: 3px;
+    }
+    /* comme le train, continuer à placer le plus fidèlement possible, les éléments de l'illustration dans le code HTML et dans la css, pour reproduire la scène */
+    .arbres-droites {
+      top: 511px;
+      background: url(img/arbres-droite.png)no-repeat;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 1029px;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="scene">
+    <div class="exercice-train"></div>
+    <div class="bg"></div>
+    <div class="sun"></div>
+    <div class="bg_mountaines"></div>
+    <div class="ground"></div>
+    <div class="city-ap"></div>
+    <div class="station-characters"></div>
+    <div class="cloud-sm"></div>
+    <div class="cloud-xl"></div>
+    <div class="birds"></div>
+    <div class="birds-2"></div>
+    <div class="rails"></div>
+    <div class="smoke"></div>
+    <div class="train"></div>    
+    <div class="arbres-droites"></div>    
+  </main>
+</body>
+</html>
